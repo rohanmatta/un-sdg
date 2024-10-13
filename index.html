@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UN SDG Web Component</title>
+    <script type="module" src="/src/un-sdg.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- UN SDGs will be inserted here -->
+    </div>
+    <button>Change Goal</button>
+
+    <script>
+      const app = document.querySelector('#app');
+      const goals = Array.from({ length: 17 }, (_, i) => i + 1);
+
+      // Create goals and append them
+      goals.forEach(goal => {
+        const sdg = document.createElement('un-sdg');
+        sdg.goal = goal.toString();
+        app.appendChild(sdg);
+      });
+
+      // Create circle and all goals
+      ['circle', 'all'].forEach(type => {
+        const specialSDG = document.createElement('un-sdg');
+        specialSDG.goal = type;
+        app.appendChild(specialSDG);
+      });
+
+      // Demonstrate color-only option
+      const colorOnlySDG = document.createElement('un-sdg');
+      colorOnlySDG.goal = '1';
+      colorOnlySDG.colorOnly = true;
+      app.appendChild(colorOnlySDG);
+
+      // Add event listener for changing the goal
+      document.querySelector('button').addEventListener('click', () => {
+        const randomGoal = (Math.floor(Math.random() * 17) + 1).toString();
+        app.lastElementChild.goal = randomGoal;
+      });
+    </script>
+  </body>
+</html>
