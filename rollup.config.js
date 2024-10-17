@@ -24,7 +24,7 @@ export default {
 
     copy({
       targets: [
-        { src: 'lib/', dest: 'dist' }
+        { src: 'lib/', dest: 'public' }
       ]
     }),
     
@@ -36,9 +36,9 @@ export default {
       minify: true,
       target: ['chrome64', 'firefox67', 'safari11.1'],
     }),
-    /** Bundle assets references via import.meta.url */
+    
     importMetaAssets(),
-    /** Minify html and css tagged template literals */
+   
     babel({
       plugins: [
         [
