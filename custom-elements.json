@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/un-sdg.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "UnSdg",
+          "members": [
+            {
+              "kind": "method",
+              "name": "updateGoalImage"
+            },
+            {
+              "kind": "field",
+              "name": "goal",
+              "type": {
+                "text": "string"
+              },
+              "default": "'1'",
+              "privacy": "public",
+              "attribute": "goal",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "privacy": "public",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "privacy": "public",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "colorOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "color-only",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_currentSrc",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "privacy": "public",
+              "attribute": "_currentSrc"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "goal",
+              "fieldName": "goal"
+            },
+            {
+              "name": "label",
+              "fieldName": "label"
+            },
+            {
+              "name": "color-only",
+              "fieldName": "colorOnly"
+            },
+            {
+              "name": "_currentSrc",
+              "fieldName": "_currentSrc"
+            },
+            {
+              "name": "alt",
+              "fieldName": "alt"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "un-sdg",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "UnSdg",
+          "declaration": {
+            "name": "UnSdg",
+            "module": "src/un-sdg.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "un-sdg",
+          "declaration": {
+            "name": "UnSdg",
+            "module": "src/un-sdg.js"
+          }
+        }
+      ]
+    }
+  ]
+}
